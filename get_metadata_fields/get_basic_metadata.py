@@ -19,7 +19,7 @@ filename = os.path.join(current_directory,'basic_metadata.csv')
 
 with open(filename, mode = 'w') as metadatafile:
 	metadatafile = csv.writer(metadatafile, delimiter = ',', quotechar = '"', quoting=csv.QUOTE_MINIMAL)
-	metadatafile.writerow(['dataset_id', 'persistentUrl','publicationdate','versionstate','latestversionnumber', 'versionreleasetime']) # Create header row
+	metadatafile.writerow(['dataset_id', 'persistentUrl','publicationDate','versionstate','latestversionnumber', 'versionreleasetime']) # Create header row
 
 for file in glob.glob(os.path.join(folder_with_json_files, '*.json')): # For each JSON file in a folder
 	with open(file, 'r') as f1: # Open each file in read mode
